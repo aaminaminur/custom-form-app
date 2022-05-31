@@ -266,6 +266,8 @@ class Migration(migrations.Migration):
                 ('age', models.CharField(verbose_name="Age", max_length=20)),
                 ('phone_number', models.CharField(verbose_name="Phone Number", max_length=100)),
                 ('user', models.OneToOneField(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='user+', to=settings.AUTH_USER_MODEL)),
+               ('school', models.CharField(verbose_name="School", max_length=100)),
+               ('class_name', models.CharField(verbose_name="Class", max_length=100)),
             ],
         ),
     ]

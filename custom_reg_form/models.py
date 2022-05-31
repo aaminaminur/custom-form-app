@@ -279,11 +279,21 @@ class ExtraInfo(models.Model):
     phone_number = models.CharField(
         verbose_name="Phone Number",
         max_length=100,
-    )    
+    )
+
+    school = models.CharField(
+        verbose_name="School",
+        max_length=100,
+    )
+
+    class_name = models.CharField(
+        verbose_name="Class",
+        max_length=100,
+    )
     
     
     def __str__(self):
-        result = '{0.user} {0.nationality} {0.age} {0.phone_number}'
+        result = '{0.user} {0.nationality} {0.age} {0.phone_number} {0.school} {0.class_name}'
         return result.format(self)
 
 
